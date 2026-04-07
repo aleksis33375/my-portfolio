@@ -396,5 +396,216 @@
 
 </div>
 
+
+<!-- ============================
+     OG-МЕТАТЕГИ — 3 варианта
+     Превью как в Telegram/ВКонтакте
+============================= -->
+
+<hr style="border:none;border-top:1px solid rgba(255,255,255,0.07);margin:3rem 0;">
+
+<h2 style="color:#8888aa;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">OG-метатеги — превью ссылки в Telegram</h2>
+<p style="font-size:0.8rem;color:#555;margin-bottom:2.5rem;">og:title + og:description + og:image · 1200×630px · показывается при отправке ссылки в мессенджер</p>
+
+<!-- Стили Telegram-карточки -->
+<style>
+  .tg-wrap { display: flex; gap: 3rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+  .tg-card {
+    width: 360px;
+    background: #212121;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: -apple-system, sans-serif;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  }
+  .tg-card.light { background: #fff; }
+  .tg-image {
+    width: 100%; height: 190px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; color: #555;
+  }
+  .tg-body { padding: 0.75rem 1rem 1rem; }
+  .tg-domain { font-size: 0.72rem; color: #5fa8d3; margin-bottom: 0.35rem; font-weight: 600; }
+  .tg-title { font-size: 0.95rem; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 0.3rem; }
+  .tg-card.light .tg-title { color: #111; }
+  .tg-desc { font-size: 0.8rem; color: #aaa; line-height: 1.45; }
+  .tg-card.light .tg-desc { color: #555; }
+  .og-code {
+    background: rgba(14,14,26,0.8); border-radius: 10px; padding: 1rem 1.25rem;
+    font-size: 0.75rem; color: #8888aa; line-height: 1.7;
+    margin-top: 1rem; border: 1px solid rgba(255,255,255,0.06);
+    font-family: monospace; max-width: 740px;
+  }
+  .og-code b { color: #6688CC; }
+  .og-code em { color: #57B374; font-style: normal; }
+  .var-label { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .var-note { font-size: 0.82rem; color: #8888aa; margin-bottom: 1.2rem; }
+  .badge-rec { background: rgba(87,179,116,0.15); color: #57B374; border: 1px solid rgba(87,179,116,0.3); font-size:0.7rem; padding: 0.15rem 0.5rem; border-radius:20px; margin-left:0.5rem; }
+</style>
+
+<!-- ── ВАРИАНТ А ── -->
+<div class="variant">
+  <div class="var-label">Вариант А — Заголовок из h1 сайта</div>
+  <div class="var-note">Берём точный h1 лендинга. Узнаваемо, совпадает с тем что человек увидит открыв страницу. Хорошо для SEO.</div>
+
+  <div class="tg-wrap">
+    <!-- Тёмный Telegram -->
+    <div>
+      <div style="font-size:0.7rem;color:#555;margin-bottom:0.4rem;">Тёмная тема Telegram</div>
+      <div class="tg-card">
+        <div class="tg-image" style="background:linear-gradient(135deg,#0d0d1a 0%,#1a1a2e 100%);">
+          <svg width="240" height="100" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+            <text x="230" y="60" text-anchor="middle" font-family="sans-serif" font-size="28" fill="rgba(232,232,240,0.7)">Сайты и AI-агенты,</text>
+            <text x="230" y="100" text-anchor="middle" font-family="sans-serif" font-size="28" fill="rgba(232,232,240,0.7)">которые работают</text>
+            <text x="230" y="150" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#FFD700" font-weight="800">пока ты спишь</text>
+          </svg>
+        </div>
+        <div class="tg-body">
+          <div class="tg-domain">aleksis-portfolio.vercel.app</div>
+          <div class="tg-title">Сайты и AI-агенты, которые работают пока ты спишь</div>
+          <div class="tg-desc">Тарасенко Алексей — помогаю малому бизнесу автоматизировать рутину и привлекать клиентов. 40+ проектов, 5 лет в разработке.</div>
+        </div>
+      </div>
+    </div>
+    <!-- Светлый Telegram -->
+    <div>
+      <div style="font-size:0.7rem;color:#555;margin-bottom:0.4rem;">Светлая тема Telegram</div>
+      <div class="tg-card light">
+        <div class="tg-image" style="background:linear-gradient(135deg,#0d0d1a 0%,#1a1a2e 100%);">
+          <svg width="240" height="100" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+            <text x="230" y="60" text-anchor="middle" font-family="sans-serif" font-size="28" fill="rgba(232,232,240,0.7)">Сайты и AI-агенты,</text>
+            <text x="230" y="100" text-anchor="middle" font-family="sans-serif" font-size="28" fill="rgba(232,232,240,0.7)">которые работают</text>
+            <text x="230" y="150" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#FFD700" font-weight="800">пока ты спишь</text>
+          </svg>
+        </div>
+        <div class="tg-body">
+          <div class="tg-domain">aleksis-portfolio.vercel.app</div>
+          <div class="tg-title">Сайты и AI-агенты, которые работают пока ты спишь</div>
+          <div class="tg-desc">Тарасенко Алексей — помогаю малому бизнесу автоматизировать рутину и привлекать клиентов. 40+ проектов, 5 лет в разработке.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="og-code">
+&lt;<b>meta</b> property="<em>og:title</em>"       content="<em>Сайты и AI-агенты, которые работают пока ты спишь</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:description</em>"  content="<em>Тарасенко Алексей — помогаю малому бизнесу автоматизировать рутину и привлекать клиентов. 40+ проектов, 5 лет в разработке.</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:image</em>"        content="<em>https://aleksis-portfolio.vercel.app/og-portfolio.png</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:url</em>"          content="<em>https://aleksis-portfolio.vercel.app</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:type</em>"         content="<em>website</em>"&gt;
+  </div>
+</div>
+
+<!-- ── ВАРИАНТ Б ── -->
+<div class="variant" style="margin-top:3rem;">
+  <div class="var-label">Вариант Б — Имя + специализация <span class="badge-rec">рекомендую</span></div>
+  <div class="var-note">Имя + профессия в заголовке — сразу понятно кто это. Лучше для личного бренда. Описание — конкретная польза без воды.</div>
+
+  <div class="tg-wrap">
+    <div>
+      <div style="font-size:0.7rem;color:#555;margin-bottom:0.4rem;">Тёмная тема Telegram</div>
+      <div class="tg-card">
+        <div class="tg-image" style="background:linear-gradient(135deg,#0d0d1a 0%,#1a1a2e 100%);">
+          <svg width="240" height="110" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+            <text x="230" y="65" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#AE5A5A" font-weight="700">Тарасенко Алексей</text>
+            <text x="230" y="105" text-anchor="middle" font-family="sans-serif" font-size="26" fill="rgba(232,232,240,0.85)">разработчик сайтов</text>
+            <text x="230" y="148" text-anchor="middle" font-family="sans-serif" font-size="26" fill="rgba(232,232,240,0.85)">и AI-агентов</text>
+          </svg>
+        </div>
+        <div class="tg-body">
+          <div class="tg-domain">aleksis-portfolio.vercel.app</div>
+          <div class="tg-title">Тарасенко Алексей — разработчик сайтов и AI-агентов</div>
+          <div class="tg-desc">Делаю сайты и AI-агентов для малого бизнеса и стартапов. Без агентств, напрямую, с гарантией сроков.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:0.7rem;color:#555;margin-bottom:0.4rem;">Светлая тема Telegram</div>
+      <div class="tg-card light">
+        <div class="tg-image" style="background:linear-gradient(135deg,#0d0d1a 0%,#1a1a2e 100%);">
+          <svg width="240" height="110" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+            <text x="230" y="65" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#AE5A5A" font-weight="700">Тарасенко Алексей</text>
+            <text x="230" y="105" text-anchor="middle" font-family="sans-serif" font-size="26" fill="rgba(232,232,240,0.85)">разработчик сайтов</text>
+            <text x="230" y="148" text-anchor="middle" font-family="sans-serif" font-size="26" fill="rgba(232,232,240,0.85)">и AI-агентов</text>
+          </svg>
+        </div>
+        <div class="tg-body">
+          <div class="tg-domain">aleksis-portfolio.vercel.app</div>
+          <div class="tg-title">Тарасенко Алексей — разработчик сайтов и AI-агентов</div>
+          <div class="tg-desc">Делаю сайты и AI-агентов для малого бизнеса и стартапов. Без агентств, напрямую, с гарантией сроков.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="og-code">
+&lt;<b>meta</b> property="<em>og:title</em>"       content="<em>Тарасенко Алексей — разработчик сайтов и AI-агентов</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:description</em>"  content="<em>Делаю сайты и AI-агентов для малого бизнеса и стартапов. Без агентств, напрямую, с гарантией сроков.</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:image</em>"        content="<em>https://aleksis-portfolio.vercel.app/og-portfolio.png</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:url</em>"          content="<em>https://aleksis-portfolio.vercel.app</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:type</em>"         content="<em>website</em>"&gt;
+  </div>
+</div>
+
+<!-- ── ВАРИАНТ В ── -->
+<div class="variant" style="margin-top:3rem;">
+  <div class="var-label">Вариант В — Кратко и ударно</div>
+  <div class="var-note">Самый короткий заголовок — легко читается в превью. Всё важное вынесено в описание: цифры, имя, действие.</div>
+
+  <div class="tg-wrap">
+    <div>
+      <div style="font-size:0.7rem;color:#555;margin-bottom:0.4rem;">Тёмная тема Telegram</div>
+      <div class="tg-card">
+        <div class="tg-image" style="background:linear-gradient(135deg,#0d0d1a 0%,#1a1a2e 100%);">
+          <svg width="240" height="110" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+            <text x="230" y="85" text-anchor="middle" font-family="sans-serif" font-size="36" fill="rgba(232,232,240,0.85)" font-weight="800">Сайты</text>
+            <text x="230" y="128" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#468F5D">и AI-агенты</text>
+            <text x="230" y="165" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#8888aa">для бизнеса</text>
+          </svg>
+        </div>
+        <div class="tg-body">
+          <div class="tg-domain">aleksis-portfolio.vercel.app</div>
+          <div class="tg-title">Сайты и AI-агенты для бизнеса</div>
+          <div class="tg-desc">Автоматизирую процессы, создаю лендинги и AI-агентов. 40+ проектов. Отвечаю в день обращения. Тарасенко Алексей.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:0.7rem;color:#555;margin-bottom:0.4rem;">Светлая тема Telegram</div>
+      <div class="tg-card light">
+        <div class="tg-image" style="background:linear-gradient(135deg,#0d0d1a 0%,#1a1a2e 100%);">
+          <svg width="240" height="110" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+            <text x="230" y="85" text-anchor="middle" font-family="sans-serif" font-size="36" fill="rgba(232,232,240,0.85)" font-weight="800">Сайты</text>
+            <text x="230" y="128" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#468F5D">и AI-агенты</text>
+            <text x="230" y="165" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#8888aa">для бизнеса</text>
+          </svg>
+        </div>
+        <div class="tg-body">
+          <div class="tg-domain">aleksis-portfolio.vercel.app</div>
+          <div class="tg-title">Сайты и AI-агенты для бизнеса</div>
+          <div class="tg-desc">Автоматизирую процессы, создаю лендинги и AI-агентов. 40+ проектов. Отвечаю в день обращения. Тарасенко Алексей.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="og-code">
+&lt;<b>meta</b> property="<em>og:title</em>"       content="<em>Сайты и AI-агенты для бизнеса</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:description</em>"  content="<em>Автоматизирую процессы, создаю лендинги и AI-агентов. 40+ проектов. Отвечаю в день обращения. Тарасенко Алексей.</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:image</em>"        content="<em>https://aleksis-portfolio.vercel.app/og-portfolio.png</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:url</em>"          content="<em>https://aleksis-portfolio.vercel.app</em>"&gt;<br>
+&lt;<b>meta</b> property="<em>og:type</em>"         content="<em>website</em>"&gt;
+  </div>
+</div>
+
+<!-- Пояснение по og:image -->
+<div style="margin-top:3rem;padding:1.25rem 1.5rem;background:rgba(14,14,26,0.85);border-radius:12px;border:1px solid rgba(255,255,255,0.06);max-width:740px;">
+  <div style="font-size:0.8rem;color:#8888aa;line-height:1.7;">
+    <b style="color:#e8e8f0;">og:image</b> — нужна картинка 1200×630px (или 630×630px для ВК).<br>
+    Пути: использовать существующие <code style="color:#6688CC;">og-landing-v2.png</code> из my-first-project,<br>
+    или создать новую под портфолио через Puppeteer (как генерировались остальные OG).
+  </div>
+</div>
+
 </body>
 </html>
