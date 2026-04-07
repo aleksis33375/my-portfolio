@@ -2160,6 +2160,34 @@
     f.addEventListener('blur',  () => btt.classList.remove('keyboard-open'));
   });
 
+  // === SHOOTING STAR DIVIDERS ===
+  (function() {
+    const durations = [0.75, 0.9, 1.05, 0.8, 0.95];
+    const sections = document.querySelectorAll('section');
+    sections.forEach((sec, i) => {
+      if (i >= sections.length - 1) return;
+      const div = document.createElement('div');
+      div.className = 'star-divider';
+      div.style.setProperty('--dur', durations[i % durations.length] + 's');
+      const streak = document.createElement('div');
+      streak.className = 'star-streak';
+      div.appendChild(streak);
+      sec.after(div);
+    });
+
+    const starIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        el.classList.remove('shooting');
+        void el.offsetWidth; // reflow → рестарт анимации
+        el.classList.add('shooting');
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.star-divider').forEach(d => starIO.observe(d));
+  })();
+
   // === ЕДИНЫЙ SCROLL (#18) ===
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
@@ -2366,6 +2394,41 @@
   .form-success p { color: var(--muted); margin-bottom: 1.25rem; font-size: 0.95rem; }
 
   @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+  /* === SHOOTING STAR DIVIDERS === */
+  .star-divider {
+    position: relative;
+    height: 2px;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .star-streak {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.15) 20%,
+      rgba(255,255,255,0.95) 50%,
+      rgba(255,255,255,0.15) 80%,
+      transparent 100%);
+    opacity: 0;
+    transform: rotate(-18deg) translateX(-250px);
+    filter: blur(0.5px);
+  }
+  .star-divider.shooting .star-streak {
+    animation: starShoot var(--dur, 0.9s) ease-in-out forwards;
+  }
+  @keyframes starShoot {
+    0%   { transform: rotate(-18deg) translateX(-250px); opacity: 0; }
+    12%  { opacity: 1; }
+    88%  { opacity: 1; }
+    100% { transform: rotate(-18deg) translateX(calc(100vw + 250px)); opacity: 0; }
+  }
 
   /* === ДОСТУПНОСТЬ: prefers-reduced-motion === */
   @media (prefers-reduced-motion: reduce) {
