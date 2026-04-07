@@ -611,7 +611,7 @@
     /* ================================
        ABOUT
     ================================ */
-    #about { padding-top: clamp(0.32rem, 0.8vw, 0.64rem); }
+    #about { padding-top: clamp(0.5rem, 1vw, 1rem); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1.6fr;
@@ -816,6 +816,8 @@
 
     @media (max-width: 600px) {
       section { padding: 2.5rem 0; }
+      #cases  { padding-bottom: 0.5rem; }
+      #about  { padding-top: 0.5rem; }
       .cases-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
       .about-stats { gap: 1.5rem; }
