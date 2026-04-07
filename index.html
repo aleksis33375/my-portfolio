@@ -816,8 +816,8 @@
 
     @media (max-width: 600px) {
       section { padding: 1.25rem 0; }
-      section#cases { padding-bottom: 0.25rem; }
-      section#about { padding-top: 0.25rem; }
+      section#cases { padding-bottom: 1rem; }
+      section#about { padding-top: 1rem; }
       .cases-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
       .about-stats { gap: 1.5rem; }
@@ -839,9 +839,8 @@
       /* hero-sub крупнее */
       .hero-sub { font-size: 1.05rem; }
 
-      /* inline-cta: убрать невидимый layout-gap */
-      .inline-cta { padding: 0.75rem 1rem; opacity: 1 !important;
-                    animation: none !important; transform: none !important; }
+      /* inline-cta скрыт на мобиле */
+      .inline-cta { display: none; }
     }
 
     /* ================================
