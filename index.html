@@ -404,7 +404,7 @@
     .hero-visual {
       display: flex; align-items: center; justify-content: center;
     }
-    .hero-illustration { width: 100%; max-width: 560px; }
+    .hero-illustration { width: 100%; max-width: 672px; }
 
     /* ================================
        PROBLEM
@@ -611,6 +611,7 @@
     /* ================================
        ABOUT
     ================================ */
+    #about { padding-top: clamp(0.32rem, 0.8vw, 0.64rem); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1.6fr;
@@ -787,7 +788,7 @@
       .hero-sub, .section-subtitle { margin-left: auto; margin-right: auto; }
       .hero-cta-group, .trust-row { justify-content: center; }
       .hero-visual { order: -1; }
-      .hero-illustration { max-width: 260px; margin: 0 auto; }
+      .hero-illustration { max-width: 312px; margin: 0 auto; }
 
       .bento-wide, .bento-std, .bento-3 { grid-column: span 12; }
 
@@ -1104,22 +1105,22 @@
              fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Outer dashed orbit -->
           <circle cx="230" cy="230" r="180"
-                  stroke="rgba(255,255,255,0.04)"
-                  stroke-width="1" stroke-dasharray="4 10"/>
+                  stroke="rgba(255,255,255,0.12)"
+                  stroke-width="1.5" stroke-dasharray="4 10"/>
           <!-- Middle ring -->
           <circle cx="230" cy="230" r="110"
-                  stroke="rgba(102,136,204,0.15)" stroke-width="1"/>
+                  stroke="rgba(102,136,204,0.35)" stroke-width="1.5"/>
           <!-- Inner rings -->
           <circle cx="230" cy="230" r="70"
-                  fill="rgba(102,136,204,0.1)"
-                  stroke="rgba(102,136,204,0.5)" stroke-width="2.5"/>
+                  fill="rgba(102,136,204,0.18)"
+                  stroke="rgba(102,136,204,0.75)" stroke-width="3"/>
           <circle cx="230" cy="230" r="48"
-                  fill="rgba(102,136,204,0.15)"
-                  stroke="rgba(102,136,204,0.65)" stroke-width="2.5"/>
+                  fill="rgba(102,136,204,0.25)"
+                  stroke="rgba(102,136,204,0.9)" stroke-width="3"/>
           <!-- AI label -->
           <text x="230" y="242" text-anchor="middle"
                 font-family="Manrope" font-weight="800"
-                font-size="32" fill="#6688CC">AI</text>
+                font-size="32" fill="rgba(102,136,204,1)">AI</text>
 
           <!-- Orbiting dot 1 (coral) -->
           <circle cx="230" cy="120" r="10" fill="#D97070">
@@ -1141,7 +1142,7 @@
           <g>
             <rect x="12" y="42" width="136" height="76" rx="14"
                   fill="rgba(14,14,26,0.97)"
-                  stroke="rgba(217,112,112,0.7)" stroke-width="2.5"/>
+                  stroke="rgba(217,112,112,0.9)" stroke-width="3"/>
             <text x="80" y="76" text-anchor="middle" font-size="24">🌐</text>
             <text x="80" y="102" text-anchor="middle"
                   font-family="Manrope" font-size="16"
@@ -1152,7 +1153,7 @@
           <g>
             <rect x="312" y="42" width="136" height="76" rx="14"
                   fill="rgba(14,14,26,0.97)"
-                  stroke="rgba(87,179,116,0.7)" stroke-width="2.5"/>
+                  stroke="rgba(87,179,116,0.9)" stroke-width="3"/>
             <text x="380" y="76" text-anchor="middle" font-size="24">👥</text>
             <text x="380" y="102" text-anchor="middle"
                   font-family="Manrope" font-size="16"
@@ -1163,7 +1164,7 @@
           <g>
             <rect x="312" y="342" width="136" height="76" rx="14"
                   fill="rgba(14,14,26,0.97)"
-                  stroke="rgba(255,215,0,0.7)" stroke-width="2.5"/>
+                  stroke="rgba(255,215,0,0.9)" stroke-width="3"/>
             <text x="380" y="376" text-anchor="middle" font-size="24">⚡</text>
             <text x="380" y="402" text-anchor="middle"
                   font-family="Manrope" font-size="14"
@@ -1174,7 +1175,7 @@
           <g>
             <rect x="12" y="342" width="136" height="76" rx="14"
                   fill="rgba(14,14,26,0.97)"
-                  stroke="rgba(102,136,204,0.7)" stroke-width="2.5"/>
+                  stroke="rgba(102,136,204,0.9)" stroke-width="3"/>
             <text x="80" y="376" text-anchor="middle" font-size="24">📊</text>
             <text x="80" y="402" text-anchor="middle"
                   font-family="Manrope" font-size="16"
@@ -1183,25 +1184,25 @@
 
           <!-- Connecting lines (animated dashes) -->
           <line x1="148" y1="118" x2="175" y2="175"
-                stroke="rgba(217,112,112,0.55)" stroke-width="2"
+                stroke="rgba(217,112,112,0.8)" stroke-width="2.5"
                 stroke-dasharray="4 5">
             <animate attributeName="stroke-dashoffset"
                      from="0" to="-18" dur="1.6s" repeatCount="indefinite"/>
           </line>
           <line x1="312" y1="85" x2="288" y2="170"
-                stroke="rgba(87,179,116,0.55)" stroke-width="2"
+                stroke="rgba(87,179,116,0.8)" stroke-width="2.5"
                 stroke-dasharray="4 5">
             <animate attributeName="stroke-dashoffset"
                      from="0" to="-18" dur="2s" repeatCount="indefinite"/>
           </line>
           <line x1="312" y1="358" x2="288" y2="290"
-                stroke="rgba(255,215,0,0.55)" stroke-width="2"
+                stroke="rgba(255,215,0,0.8)" stroke-width="2.5"
                 stroke-dasharray="4 5">
             <animate attributeName="stroke-dashoffset"
                      from="0" to="-18" dur="1.8s" repeatCount="indefinite"/>
           </line>
           <line x1="148" y1="342" x2="172" y2="290"
-                stroke="rgba(102,136,204,0.55)" stroke-width="2"
+                stroke="rgba(102,136,204,0.8)" stroke-width="2.5"
                 stroke-dasharray="4 5">
             <animate attributeName="stroke-dashoffset"
                      from="0" to="-18" dur="2.2s" repeatCount="indefinite"/>
