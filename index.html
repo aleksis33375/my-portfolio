@@ -25,8 +25,8 @@
       --h1:    clamp(1.92rem, 5.6vw, 4.4rem);
       --h2:    clamp(1.8rem, 4vw, 3rem);
       --h3:    clamp(1.2rem, 2.5vw, 1.6rem);
-      --body:  clamp(1rem, 1.5vw, 1.125rem);
-      --small: clamp(0.8rem, 1.2vw, 0.9rem);
+      --body:  clamp(1.05rem, 1.5vw, 1.125rem);
+      --small: clamp(0.875rem, 1.2vw, 0.9rem);
     }
 
     html { scroll-behavior: smooth; }
@@ -294,10 +294,10 @@
     }
     .status-badge {
       display: flex; align-items: center; gap: 0.4rem;
-      font-size: 0.75rem; color: var(--green); font-weight: 600;
-      background: rgba(87,179,116,0.1);
-      border: 1px solid rgba(87,179,116,0.2);
-      border-radius: 20px; padding: 0.2rem 0.6rem;
+      font-size: 0.85rem; color: var(--green); font-weight: 700;
+      background: rgba(70,143,93,0.18);
+      border: 1.5px solid rgba(70,143,93,0.5);
+      border-radius: 20px; padding: 0.25rem 0.75rem;
     }
     .status-dot {
       width: 7px; height: 7px;
@@ -788,7 +788,7 @@
       .hero-sub, .section-subtitle { margin-left: auto; margin-right: auto; }
       .hero-cta-group, .trust-row { justify-content: center; }
       .hero-visual { order: -1; }
-      .hero-illustration { max-width: 312px; margin: 0 auto; }
+      .hero-illustration { max-width: 360px; margin: 0 auto; }
 
       .bento-wide, .bento-std, .bento-3 { grid-column: span 12; }
 
@@ -823,6 +823,19 @@
       #contact .cta-box { padding: 1.25rem; }
       .cta-trust { font-size: 0.78rem; }
       .inline-cta { padding: 1.5rem 1rem; }
+
+      /* Навигация всегда с фоном на мобиле */
+      nav {
+        background: rgba(8,8,16,0.92);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+
+      /* Бейдж крупнее на мобиле */
+      .status-badge { font-size: 0.9rem; padding: 0.3rem 0.8rem; }
+
+      /* hero-sub крупнее */
+      .hero-sub { font-size: 1.05rem; }
     }
 
     /* ================================
@@ -1118,9 +1131,9 @@
                   fill="rgba(102,136,204,0.25)"
                   stroke="rgba(102,136,204,0.9)" stroke-width="3"/>
           <!-- AI label -->
-          <text x="230" y="242" text-anchor="middle"
+          <text x="230" y="244" text-anchor="middle"
                 font-family="Manrope" font-weight="800"
-                font-size="32" fill="rgba(102,136,204,1)">AI</text>
+                font-size="40" fill="rgba(102,136,204,1)">AI</text>
 
           <!-- Orbiting dot 1 (coral) -->
           <circle cx="230" cy="120" r="10" fill="#D97070">
@@ -1140,46 +1153,46 @@
 
           <!-- Node: Сайт -->
           <g>
-            <rect x="12" y="42" width="136" height="76" rx="14"
+            <rect x="8" y="34" width="148" height="90" rx="14"
                   fill="rgba(14,14,26,0.97)"
                   stroke="rgba(217,112,112,0.9)" stroke-width="3"/>
-            <text x="80" y="76" text-anchor="middle" font-size="24">🌐</text>
-            <text x="80" y="102" text-anchor="middle"
-                  font-family="Manrope" font-size="16"
-                  font-weight="700" fill="#D97070">Сайт</text>
+            <text x="82" y="72" text-anchor="middle" font-size="26">🌐</text>
+            <text x="82" y="106" text-anchor="middle"
+                  font-family="Manrope" font-size="22"
+                  font-weight="800" fill="#D97070">Сайт</text>
           </g>
 
           <!-- Node: Клиенты -->
           <g>
-            <rect x="312" y="42" width="136" height="76" rx="14"
+            <rect x="304" y="34" width="148" height="90" rx="14"
                   fill="rgba(14,14,26,0.97)"
                   stroke="rgba(87,179,116,0.9)" stroke-width="3"/>
-            <text x="380" y="76" text-anchor="middle" font-size="24">👥</text>
-            <text x="380" y="102" text-anchor="middle"
-                  font-family="Manrope" font-size="16"
-                  font-weight="700" fill="#57B374">Клиенты</text>
+            <text x="378" y="72" text-anchor="middle" font-size="26">👥</text>
+            <text x="378" y="106" text-anchor="middle"
+                  font-family="Manrope" font-size="22"
+                  font-weight="800" fill="#57B374">Клиенты</text>
           </g>
 
           <!-- Node: Автоматизация -->
           <g>
-            <rect x="312" y="342" width="136" height="76" rx="14"
+            <rect x="304" y="336" width="148" height="90" rx="14"
                   fill="rgba(14,14,26,0.97)"
                   stroke="rgba(255,215,0,0.9)" stroke-width="3"/>
-            <text x="380" y="376" text-anchor="middle" font-size="24">⚡</text>
-            <text x="380" y="402" text-anchor="middle"
-                  font-family="Manrope" font-size="14"
-                  font-weight="700" fill="#FFD700">Автоматизация</text>
+            <text x="378" y="374" text-anchor="middle" font-size="26">⚡</text>
+            <text x="378" y="408" text-anchor="middle"
+                  font-family="Manrope" font-size="17"
+                  font-weight="800" fill="#FFD700">Автоматизация</text>
           </g>
 
           <!-- Node: Аналитика -->
           <g>
-            <rect x="12" y="342" width="136" height="76" rx="14"
+            <rect x="8" y="336" width="148" height="90" rx="14"
                   fill="rgba(14,14,26,0.97)"
                   stroke="rgba(102,136,204,0.9)" stroke-width="3"/>
-            <text x="80" y="376" text-anchor="middle" font-size="24">📊</text>
-            <text x="80" y="402" text-anchor="middle"
-                  font-family="Manrope" font-size="16"
-                  font-weight="700" fill="#6688CC">Аналитика</text>
+            <text x="82" y="374" text-anchor="middle" font-size="26">📊</text>
+            <text x="82" y="408" text-anchor="middle"
+                  font-family="Manrope" font-size="22"
+                  font-weight="800" fill="#6688CC">Аналитика</text>
           </g>
 
           <!-- Connecting lines (animated dashes) -->
